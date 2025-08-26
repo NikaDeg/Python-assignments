@@ -10,6 +10,7 @@ else:
 
 
 '''
+NO NEED to check below
 just my first attempt without knowing the function %, I left it for memory :)
 
 year = float(input("Enter a year: "))
