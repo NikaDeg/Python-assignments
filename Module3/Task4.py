@@ -9,8 +9,6 @@ else:
 
 
 
-
-
 '''
 just my first attempt without knowing the function %, I left it for memory :)
 
