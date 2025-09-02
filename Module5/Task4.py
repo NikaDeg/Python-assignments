@@ -1,5 +1,5 @@
 all_cities = []
-for name in range(0,5):
+for _ in range(5):
     city = input("Enter the name of a city: ")
     all_cities.append(city)
 print("\n\nThe cities you entered: ")
