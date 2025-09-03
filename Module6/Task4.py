@@ -1,6 +1,6 @@
 def sum_of_list(integers):
     sum = 0
-    for i in integers:
+    for i in integers:      # sum = sum(integers)
         i = int(i)
         sum = sum + i
     return sum
