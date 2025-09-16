@@ -21,8 +21,7 @@ def run_country_program():
     from collections import Counter
     airport_names = [name[0] for name in get_airports_by_country(country_code_entered)]
     grouped = Counter(airport_names)
-    result = list(grouped.items())
-    for airport, count in result:
+    for airport, count in grouped.items():
         print(f"\n {count} {airport} airports")
 
 print("Airports in FI:")

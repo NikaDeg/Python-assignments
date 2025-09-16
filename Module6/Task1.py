@@ -8,7 +8,6 @@ number = roll_dice()
 while number < 6:
     print (f"{number}")
     number = roll_dice()
-if number == 6:
-    print ("6")
+print ("6")
 
 

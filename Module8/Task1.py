@@ -13,10 +13,10 @@ def get_location(code):
     sql = f"select name, municipality from airport where ident = '{code}'"
     cursor = connection.cursor()
     cursor.execute(sql)
-    data = cursor.fetchone()
-    return data
+    data = cursor.fetchall()
+    for row in data:
+        print(f"Airport name: {row[0]}\nLocation: {row[1]}")
+    return
 
 code_entered = input("Enter the ICAO code of an airport: ")
-result = get_location(code_entered)
-
-print(f"Airport name: {result[0]}\nLocation: {result[1]}")
+get_location(code_entered)
