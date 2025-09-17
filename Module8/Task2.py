@@ -12,6 +12,7 @@ connection = mysql.connector.connect(
 country_code_entered = input("Enter the country code (e.g., FI for Finland): ")
 def get_airports_by_country(country_code):
     sql = f"select type from airport where iso_country = '{country_code}'"
+    # select type, count(*) as airport_count from airport where iso_country '{country_code}' group by type order by airport_count desc
     cursor = connection.cursor()
     cursor.execute(sql)
     data = cursor.fetchall()
@@ -24,6 +25,6 @@ def run_country_program():
     for airport, count in grouped.items():
         print(f"\n {count} {airport} airports")
 
-print("Airports in FI:")
+print(f"Airports in {country_code_entered}:")
 run_country_program()
 
