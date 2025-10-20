@@ -24,7 +24,13 @@ def race():
         random_speed = random.randint(100, 200)
         car = Car(f"ABC-{i+1}", random_speed)
         cars.append(car)
-    while all(car.travelled_distance < 10000 for car in cars):
+    racing = True
+    while racing:
+        # check if end race
+        for car in cars:
+            if car.travelled_distance >= 10000:
+                racing = False
+        # do race
         for car in cars:
             random_acceleration = random.randint(-10, 15)
             car.accelerate(random_acceleration)
@@ -34,9 +40,9 @@ def race():
 
     return cars_desc
 
-# cars = race()
-# for car in cars:
-#     print(car.license_plate, car.maximum_speed, car.travelled_distance)
+cars = race()
+for car in cars:
+    print(car.license_plate, car.maximum_speed, car.travelled_distance)
 
 # race_results = race()
 # print(f"Race completed! {len(race_results)} cars participated.")
