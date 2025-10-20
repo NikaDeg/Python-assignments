@@ -41,11 +41,11 @@ def race():
 # for car in cars:
 #     print(car.license_plate, car.maximum_speed, car.travelled_distance)
 
-race_results = race()
-print(f"Race completed! {len(race_results)} cars participated.")
-print("Top 3 finishers:")
-for i, car in enumerate(race_results[:3]):
-    print(f"{i+1}. {car.license_plate}: {car.travelled_distance:.1f} km (speed: {car.current_speed} km/h)")
-
-winner = race_results[0]
-print(f"\nWinner: {winner.license_plate} with {winner.travelled_distance:.1f} km!")
+# race_results = race()
+# print(f"Race completed! {len(race_results)} cars participated.")
+# print("Top 3 finishers:")
+# for i, car in enumerate(race_results[:3]):
+#     print(f"{i+1}. {car.license_plate}: {car.travelled_distance:.1f} km (speed: {car.current_speed} km/h)")
+#
+# winner = race_results[0]
+# print(f"\nWinner: {winner.license_plate} with {winner.travelled_distance:.1f} km!")
