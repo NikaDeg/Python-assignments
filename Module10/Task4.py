@@ -31,8 +31,10 @@ class Race:
             car.drive(1)
 
     def print_status(self):
+        print("| THE CAR |   SPEED   | DISTANCE |")
+        print("|---------|-----------|----------|")
         for car in self.cars:
-            print(f"The car: {car.license_plate} drives at speed {car.maximum_speed} km/h, has made already {car.travelled_distance} km.")
+            print(f"|  {car.license_plate}  |  {car.maximum_speed} km/h |  {car.travelled_distance} km.  |")
 
     def race_finished(self):
         for car in self.cars:
@@ -58,3 +60,5 @@ for hour in range(5):
     race.hour_passes()
     if hour == 2:
         print(f"After {hour+1} hours, race finished: {race.race_finished()}")
+
+race.print_status()
